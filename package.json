@@ -1,0 +1,19 @@
+{
+  "name": "clickstarter",
+  "version": "1.0.0",
+  "description": "platform for view-based fundraising",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seanemmer/clickstarter.git"
+  },
+  "author": "Sean Emmer & Tommy Gibbons",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/seanemmer/clickstarter/issues"
+  },
+  "homepage": "https://github.com/seanemmer/clickstarter#readme"
+}
