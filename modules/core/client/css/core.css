@@ -33,7 +33,8 @@ dl dd {
 
 /* Home */
 .jumbotron {
-  margin-top: 60px; }
+  margin-top: 60px;
+  max-width: 80%; }
 
 @media (max-width: 768px) {
   .jumbotron {

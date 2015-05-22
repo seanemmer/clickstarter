@@ -5,7 +5,9 @@ module.exports = {
 		lib: {
 			css: [
 				'public/lib/bootswatch/paper/bootstrap.css',
-				'public/lib/angular-layout/dist/angular-layout.css'
+				'public/lib/angular-layout/dist/angular-layout.css',
+				'public/lib/fontawesome/css/font-awesome.css'
+			
 			],
 			js: [
 				'public/lib/angular/angular.js',
