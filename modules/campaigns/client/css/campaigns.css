@@ -1,0 +1,95 @@
+.campaigns-container {
+  margin-top: 1px;
+  height: 700px;
+  font-size: 14px; }
+  .campaigns-container h4, .campaigns-container h5 {
+    margin-top: 24px; }
+  .campaigns-container h4 {
+    margin-bottom: 0px; }
+  .campaigns-container h5 {
+    margin-bottom: 18px; }
+
+/* Filters */
+.campaigns-filters {
+  border-right: solid;
+  border-width: 1px;
+  border-color: #666666;
+  padding-right: 24px; }
+  .campaigns-filters li {
+    cursor: pointer; }
+  .campaigns-filters li:hover {
+    color: #1990ef; }
+  .campaigns-filters ul > ul > li {
+    list-style-type: disc; }
+
+/* Main */
+.campaigns-main {
+  padding-right: 14px;
+  width: 75%; }
+  .campaigns-main .subtitle {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-style: italic; }
+  .campaigns-main img {
+    max-width: 100%; }
+  .campaigns-main .campaign-photos {
+    width: 50%;
+    padding-right: 8px; }
+  .campaigns-main .campaign-text {
+    width: 50%;
+    padding-left: 8px; }
+  .campaigns-main dl {
+    font-size: 18px; }
+  .campaigns-main .progress {
+    width: 90%;
+    height: 23px; }
+    .campaigns-main .progress :last-child:before {
+      background-color: #f5f5f5; }
+  .campaigns-main .progress-legend ul {
+    list-style-type: none; }
+  .campaigns-main .progress-legend .legend-color {
+    display: inline-block;
+    margin-right: 5px;
+    margin-top: 2px;
+    height: 10px;
+    width: 24px; }
+
+/* Feed */
+.campaigns-feeds {
+  height: 100%;
+  width: 25%;
+  border-left: solid;
+  border-width: 1px;
+  border-color: #666666;
+  padding-left: 14px; }
+  .campaigns-feeds hr {
+    border-color: #666666;
+    width: 40%;
+    height: 1px;
+    margin-top: 16px;
+    margin-bottom: 16px; }
+  .campaigns-feeds .feed-item-img {
+    float: left;
+    margin-right: 14px;
+    width: 40px !important;
+    height: 40px !important;
+    overflow: hidden;
+    border-radius: 50%; }
+    .campaigns-feeds .feed-item-img img {
+      display: inline;
+      width: 100%;
+      height: 100%; }
+  .campaigns-feeds .feed-item-text {
+    padding-top: 3px;
+    line-height: 18px; }
+
+.campaigns-feeds-popular {
+  overflow: auto;
+  height: 50%; }
+
+.campaigns-feeds-friends {
+  overflow: auto;
+  height: 50%;
+  border-top: solid;
+  border-width: 1px;
+  border-color: #666666; }

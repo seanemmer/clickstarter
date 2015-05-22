@@ -1,0 +1,144 @@
+.campaigns-container {
+	margin-top: 1px;
+	height: 700px;
+	font-size: 14px;
+
+	h4, h5 {
+		margin-top: 24px;
+	}
+
+	h4 { 
+		margin-bottom: 0px;
+	}
+
+	h5 {
+		margin-bottom: 18px;
+	}
+}
+
+/* Filters */
+
+.campaigns-filters {
+	border-right: solid;
+	border-width: 1px;
+	border-color: rgb(102,102,102);
+	padding-right: 24px;
+
+	li {
+		cursor: pointer;
+	}
+
+	li:hover {
+		color: rgb(25, 144, 239);
+	}
+
+	ul>ul>li {
+		list-style-type: disc;
+	}
+}
+
+/* Main */
+
+.campaigns-main {
+	padding-right: 14px;
+	width: 75%;
+
+	.subtitle {
+		margin-bottom: 20px;
+		font-size: 16px;
+		font-style: italic;
+	}
+
+	img {
+		max-width: 100%;
+	}
+
+	.campaign-photos {
+		width: 50%;
+		padding-right: 8px;
+	}
+
+	.campaign-text {
+		width: 50%;
+		padding-left: 8px;
+	}
+
+	dl {
+		font-size: 18px;
+	}
+
+	.progress {
+		width: 90%;
+		height: 23px;
+
+		:last-child:before {
+			background-color: #f5f5f5;
+		}
+	}
+
+	.progress-legend {
+		ul {
+			list-style-type: none;
+		}
+
+		.legend-color {
+			display: inline-block;
+			margin-right: 5px;
+			margin-top: 2px;
+			height: 10px;
+			width: 24px;
+		}
+	}
+}
+
+/* Feed */
+
+.campaigns-feeds {
+	height: 100%;
+	width: 25%;
+	border-left: solid;
+	border-width: 1px;
+	border-color: rgb(102,102,102);
+	padding-left: 14px;
+
+	hr {
+		border-color: rgb(102,102,102);
+		width: 40%;
+		height: 1px;
+		margin-top: 16px;
+		margin-bottom: 16px;
+	}
+
+	.feed-item-img {
+		float: left;
+		margin-right: 14px;
+		width: 40px !important;
+		height: 40px !important;
+		overflow: hidden;
+		border-radius: 50%;
+
+		img {
+			display: inline;
+		    width: 100%;
+		    height: 100%;
+		}
+	}
+
+	.feed-item-text {
+		padding-top: 3px;
+		line-height: 18px;
+	}
+}
+
+.campaigns-feeds-popular {
+	overflow: auto;
+	height: 50%;
+}
+
+.campaigns-feeds-friends {
+	overflow: auto;
+	height: 50%;
+	border-top: solid;
+	border-width: 1px;
+	border-color: rgb(102,102,102);
+}

@@ -1,0 +1,40 @@
+@import url(http://fonts.googleapis.com/css?family=Carter+One);
+/* General */
+.bold {
+  font-weight: bold; }
+
+.logo-font {
+  font-family: 'Carter One', Roboto, 'Helvetica Neue', Helvetica; }
+
+.content-container {
+  max-width: 80%;
+  margin-top: 24px; }
+
+dl dd {
+  line-height: 22px; }
+
+/* Colors */
+.primary {
+  background-color: #2196f3; }
+
+.success {
+  background-color: #4caf50; }
+
+.warning {
+  background-color: #ff9800; }
+
+/* Header */
+.navbar {
+  margin-bottom: 0; }
+
+.navbar-brand {
+  color: white !important;
+  font-size: 24px; }
+
+/* Home */
+.jumbotron {
+  margin-top: 60px; }
+
+@media (max-width: 768px) {
+  .jumbotron {
+    padding: 40px; } }

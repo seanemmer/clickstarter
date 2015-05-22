@@ -46,9 +46,9 @@ gulp.task('watch', function() {
 	gulp.watch(defaultAssets.server.views).on('change', plugins.livereload.changed);
 	gulp.watch(defaultAssets.server.allJS, ['jshint']).on('change', plugins.livereload.changed);
 	gulp.watch(defaultAssets.client.views).on('change', plugins.livereload.changed);
-	gulp.watch(defaultAssets.server.views, ['jshint']).on('change', plugins.livereload.changed);
-	gulp.watch(defaultAssets.server.css, ['csslint']).on('change', plugins.livereload.changed);
-	gulp.watch(defaultAssets.server.sass, ['sass', 'csslint']).on('change', plugins.livereload.changed);
+	gulp.watch(defaultAssets.client.views, ['jshint']).on('change', plugins.livereload.changed);
+	gulp.watch(defaultAssets.client.css, ['csslint']).on('change', plugins.livereload.changed);
+	gulp.watch(defaultAssets.client.sass, ['sass', 'csslint']).on('change', plugins.livereload.changed);
 });
 
 // CSS linting task
