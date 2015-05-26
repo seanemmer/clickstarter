@@ -7,45 +7,81 @@
   .campaigns-container h4 {
     margin-bottom: 0; }
   .campaigns-container h5 {
-    margin-bottom: 18px; }
+    margin-bottom: 18px;
+    font-size: 18px; }
 
-/* Filters */
-.campaigns-filters {
-  border-right: solid;
-  border-width: 1px;
-  border-color: #666666;
-  padding-right: 24px; }
-  .campaigns-filters li {
-    cursor: pointer; }
-  .campaigns-filters li:hover {
-    color: #1990ef; }
-  .campaigns-filters ul > ul > li {
-    list-style-type: disc; }
-
-/* Main */
+/* Main General */
 .campaigns-main {
   padding-right: 14px;
   width: 75%; }
   .campaigns-main .subtitle {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 18px;
     font-style: italic; }
-  .campaigns-main img {
+
+/* Main List */
+.campaigns-main .campaigns-list-container {
+  overflow: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%; }
+.campaigns-main .campaigns-list-card {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4), transparent);
+  width: calc(50% - 10px);
+  margin: 3px;
+  cursor: pointer; }
+  .campaigns-main .campaigns-list-card .card-label {
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    color: white; }
+    .campaigns-main .campaigns-list-card .card-label h4 {
+      color: white; }
+  .campaigns-main .campaigns-list-card img {
+    position: relative;
+    z-index: -1;
     max-width: 100%;
-    box-shadow: 0px 0px 2px #888888; }
-  .campaigns-main .campaign-photos {
-    width: 50%;
-    padding-right: 8px; }
-  .campaigns-main .campaign-text {
-    width: 50%;
-    padding-left: 8px; }
-  .campaigns-main dl {
-    font-size: 18px; }
-  .campaigns-main .progress {
-    width: 90%;
-    height: 23px; }
-    .campaigns-main .progress :last-child:before {
-      background-color: #f5f5f5; }
+    max-height: 500px;
+    box-shadow: 0 0 2px #888888;
+    transition-duration: 0.2s; }
+
+.campaigns-list-card:hover img {
+  transform: scale(1.03); }
+.campaigns-list-card:hover .card-label {
+  border-style: solid;
+  border-color: #2196f3; }
+
+/* Main Show */
+.campaigns-main .campaigns-show-photo {
+  width: 50%;
+  padding-right: 8px; }
+  .campaigns-main .campaigns-show-photo img {
+    max-width: 100%;
+    max-height: 500px;
+    box-shadow: 0 0 2px #888888; }
+.campaigns-main .campaigns-show-text {
+  width: 50%;
+  padding-left: 8px; }
+.campaigns-main dl {
+  font-size: 18px;
+  color: #444444; }
+.campaigns-main .contribute-button {
+  margin-top: 24px;
+  width: 300px; }
+.campaigns-main .progress {
+  width: 90%;
+  height: 23px; }
+  .campaigns-main .progress :last-child:before {
+    background-color: #f5f5f5; }
+.campaigns-main .progress-legend {
+  display: flex;
+  justify-content: center; }
   .campaigns-main .progress-legend ul {
     list-style-type: none; }
   .campaigns-main .progress-legend .legend-color {
@@ -54,6 +90,32 @@
     margin-top: 2px;
     height: 10px;
     width: 24px; }
+
+/* Main offers */
+.campaigns-main .campaigns-offers-container {
+  margin-top: 24px;
+  width: 60%; }
+.campaigns-main .campaigns-offers-row {
+  text-align: left;
+  padding: 18px; }
+  .campaigns-main .campaigns-offers-row img {
+    width: 100px;
+    height: 100px; }
+  .campaigns-main .campaigns-offers-row .row-label {
+    margin-left: 28px;
+    width: 172px; }
+    .campaigns-main .campaigns-offers-row .row-label h5 {
+      margin-top: 8px;
+      margin-bottom: 0px; }
+    .campaigns-main .campaigns-offers-row .row-label p {
+      margin-bottom: 8px; }
+  .campaigns-main .campaigns-offers-row .karma-label {
+    font-size: 20px;
+    margin-left: 100px;
+    align-self: center; }
+.campaigns-main .campaigns-offers-row:hover {
+  cursor: pointer;
+  background-color: #cae6fc; }
 
 /* Feed */
 .campaigns-feeds {
@@ -75,7 +137,7 @@
     height: 40px !important;
     overflow: hidden;
     border-radius: 50%;
-    box-shadow: 0px 0px 2px #888888; }
+    box-shadow: 0 0 2px #888888; }
     .campaigns-feeds .feed-item-img img {
       width: 100%;
       height: 100%; }

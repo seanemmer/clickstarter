@@ -1,5 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Carter+One);
-
 /* General */
 
 .bold {
@@ -19,6 +17,18 @@ dl dd{
 	line-height: 22px;
 }
 
+/* FlexBox */
+
+.x-flex {
+	display: flex;
+	flex-direction: row;
+}
+
+.y-flex {
+	display: flex;
+	flex-direction: column;
+}
+
 /* Colors */
 
 .primary {
@@ -31,6 +41,10 @@ dl dd{
 
 .warning {
 	background-color: #ff9800;
+}
+
+.danger {
+	background-color: #E51C23;
 }
 
 /* Header */
