@@ -30,7 +30,6 @@
   display: inline-block;
   overflow: hidden;
   position: relative;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4), transparent);
   width: calc(50% - 10px);
   margin: 3px;
   cursor: pointer; }
@@ -106,7 +105,7 @@
     width: 172px; }
     .campaigns-main .campaigns-offers-row .row-label h5 {
       margin-top: 8px;
-      margin-bottom: 0px; }
+      margin-bottom: 0; }
     .campaigns-main .campaigns-offers-row .row-label p {
       margin-bottom: 8px; }
   .campaigns-main .campaigns-offers-row .karma-label {
