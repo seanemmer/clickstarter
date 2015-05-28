@@ -1,0 +1,41 @@
+<div class="y-flex offers-container">
+	<h4 class="bold">Princeton Alumni Demographic Survey</h4>
+	<span class="subtitle">Sponsored by Bonobos</span>	
+
+		<!-- Survey Start -->
+		<div class="survey-step-container text-center" ng-if="surveyStep===-1">
+			<h5 class="bold">Thank you for participating in this survey!</h5>
+			<p>By filling out this brief, fully anonymous questionnaire about your Princeton experience, you are generating valuable support for your campaign!</p>
+			<button ng-click="surveyStart()" class="btn btn-lg btn-success">Get Started!</button>
+		</div>
+
+
+		<!-- Survey Finish -->
+		<div class="survey-step-container text-center" ng-if="surveyStep===surveyQuestions.length">
+			<h5 class="bold">Thank you for completing in this survey!</h5>
+			<p>Your support is greatly appreciated.  Head back to the campaigns page to find more great causes!</p>
+			<button ui-sref="campaigns.list" class="btn btn-lg btn-success">Campaigns Home</button>
+		</div>
+
+		<!-- Survey Questions -->
+		<div ng-repeat="question in surveyQuestions" class="survey-step-container" ng-if="$index===surveyStep">
+			<h5>{{question.prompt}}</h5>
+			<div ng-repeat="answer in question.answers" class="radio">
+			  <label>
+			    <input type="radio" name="$index" ng-value="$index" ng-model="surveyAnswers[$parent.$index]">
+			    {{answer}}
+			  </label>
+			</div>
+		</div>
+
+		<!-- Survey Nav -->
+		<div class="btn-group survey-nav" role="group" aria-label="survey-nav">
+		  <button ng-if="surveyStep > 0 && surveyStep < surveyQuestions.length" ng-click="surveyPrev()" type="button" class="btn btn-lg btn-default"><i class="fa fa-angle-left"> Prev</i></button>
+		  <button ng-if="surveyStep >= 0 && surveyStep < surveyQuestions.length - 1" ng-click="surveyNext()" type="button" class="btn btn-lg btn-default">Next <i class="fa fa-angle-right"></i></button>
+		  <button ng-if="surveyStep === surveyQuestions.length - 1" ng-click="surveyNext()" type="button" class="btn btn-lg btn-success">Complete <i class="fa fa-angle-right"></i></button>
+		</div>
+
+		<!-- Error Message -->
+		<p ng-if="surveyError" class="help-block">Please answer the current question before proceeding</p>
+
+</div>

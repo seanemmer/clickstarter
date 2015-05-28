@@ -1,7 +1,5 @@
 /* Container */
 .campaigns-container {
-  margin-top: 1px;
-  height: 700px;
   font-size: 14px; }
   .campaigns-container h4, .campaigns-container h5 {
     margin-top: 24px; }
@@ -10,15 +8,16 @@
   .campaigns-container h5 {
     margin-bottom: 18px;
     font-size: 18px; }
-
-/* Main General */
-.campaigns-main {
-  padding-right: 14px;
-  width: 75%; }
-  .campaigns-main .subtitle {
+  .campaigns-container .subtitle {
     margin-bottom: 20px;
     font-size: 18px;
     font-style: italic; }
+
+/* Main General */
+.campaigns-main {
+  align-items: center;
+  padding-right: 14px;
+  width: 75%; }
 
 /* Main List */
 .campaigns-main .campaigns-list-container {
@@ -28,43 +27,34 @@
   flex-wrap: wrap;
   width: 100%; }
 .campaigns-main .campaigns-list-card {
-  display: inline-block;
-  overflow: hidden;
+  background-size: cover !important;
+  height: 320px;
   position: relative;
   width: calc(50% - 10px);
   margin: 3px;
-  cursor: pointer; }
+  cursor: pointer;
+  box-shadow: 0 0 2px #888888; }
   .campaigns-main .campaigns-list-card .card-label {
     justify-content: center;
     position: absolute;
     width: 100%;
     height: 100%;
-    z-index: 1;
     color: white; }
     .campaigns-main .campaigns-list-card .card-label h4 {
       color: white; }
-  .campaigns-main .campaigns-list-card img {
-    position: relative;
-    z-index: -1;
-    max-width: 100%;
-    max-height: 500px;
-    box-shadow: 0 0 2px #888888;
-    transition-duration: 0.2s; }
 
-.campaigns-list-card:hover img {
-  transform: scale(1.03); }
 .campaigns-list-card:hover .card-label {
   border-style: solid;
   border-color: #2196f3; }
 
 /* Main Show */
 .campaigns-main .campaigns-show-photo {
+  background-size: cover !important;
+  justify-content: flex-end;
+  max-height: 400px;
   width: 50%;
-  padding-right: 8px; }
-  .campaigns-main .campaigns-show-photo img {
-    max-width: 100%;
-    max-height: 336px;
-    box-shadow: 0 0 2px #888888; }
+  margin-right: 8px;
+  box-shadow: 0 0 2px #888888; }
 .campaigns-main .campaigns-show-text {
   width: 50%;
   padding-left: 8px; }
@@ -73,7 +63,7 @@
   color: #444444; }
 .campaigns-main .contribute-button {
   margin-top: 24px;
-  width: 300px; }
+  width: 320px; }
 .campaigns-main .progress {
   width: 90%;
   height: 23px; }
@@ -149,11 +139,13 @@
 
 .campaigns-feeds-popular {
   overflow: auto;
-  height: 50%; }
+  height: 50%;
+  margin-bottom: 14px; }
 
 .campaigns-feeds-friends {
   overflow: auto;
   height: 50%;
   border-top: solid;
   border-width: 1px;
-  border-color: #666666; }
+  border-color: #666666;
+  margin-bottom: 14px; }

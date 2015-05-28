@@ -1,13 +1,13 @@
-<h4 class="bold">Tiggy the Tigerator</h4>
-<span class="subtitle">Bringing beer to the masses</span>
+<h4 class="bold">{{selectedCampaign.title}}</h4>
+<span class="subtitle">{{selectedCampaign.subtitle}}</span>
 <div class="x-flex campaigns-main-content text-left">
-	<div class="campaigns-show-photo">
-		<img src="/modules/core/img/temp/tiggy.png"/>
+	<div class="x-flex campaigns-show-photo"
+	ng-style="{'background-image': 'url(/modules/campaigns/img/temp/{{selectedCampaign.img}})'}">
 	</div>
 	<div class="campaigns-show-text">
 		<dl>
 		  <dt>Description</dt>
-		  <dd>Help us raise capital to enhance Tiggy for Reunions 2016!</dd>
+		  <dd>{{selectedCampaign.body}}</dd>
 		  <br>
 		  <dt>Thresholds:</dt>
 		  <dd>500 Karma: Basic stuff</dd>

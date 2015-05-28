@@ -1,0 +1,49 @@
+/* Container */
+
+.offers-container {
+	width: 100%;
+	align-items: center;
+
+	h4 { 
+		margin-top: 36px;
+		margin-bottom: 0;
+	}
+
+	h5 {
+		margin-bottom: 18px;
+	}
+
+	.subtitle {
+
+		font-size: 18px;
+		font-style: italic;
+	}
+}
+
+/* Survey */
+
+.offers-container {
+	.radio>label {
+		font-size: 18px;
+	}
+
+	.survey-step-container {
+		margin-top: 48px;
+		min-height: 240px;
+		width: 440px;
+
+		p {
+			font-size: 18px;
+			margin-bottom: 48px;
+		}
+	}
+
+	.survey-nav {
+		margin-top: 24px;
+	}
+
+	.help-block {
+		margin-top: 18px;
+		color: #e51c23;
+	}
+}

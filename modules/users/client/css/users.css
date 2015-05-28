@@ -55,6 +55,7 @@
     color: #e51c23; }
   .authentication-container form ::-webkit-outer-spin-button, .authentication-container form ::-webkit-inner-spin-button {
     -webkit-appearance: none;
+    -moz-appearance: none;
     margin: 0; }
 
 /* Sign In */

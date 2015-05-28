@@ -1,8 +1,6 @@
 /* Container */
 
 .campaigns-container {
-	margin-top: 1px;
-	height: 700px;
 	font-size: 14px;
 
 	h4, h5 {
@@ -17,20 +15,21 @@
 		margin-bottom: 18px;
 		font-size: 18px;
 	}
-}
-
-/* Main General */
-
-.campaigns-main {
-	padding-right: 14px;
-	width: 75%;
 
 	.subtitle {
 		margin-bottom: 20px;
 		font-size: 18px;
 		font-style: italic;
 	}
+	//height: 800px;
+}
 
+/* Main General */
+
+.campaigns-main {
+	align-items: center;
+	padding-right: 14px;
+	width: 75%;
 }
 
 /* Main List */
@@ -42,46 +41,33 @@
 		margin-top: 20px;
 		display: flex;
 		flex-wrap: wrap;
-		width: 100%
+		width: 100%;
 	}
 
 	.campaigns-list-card {
-		display: inline-block;
-		overflow: hidden;
+		background-size: cover !important;
+		height: 320px;
 		position: relative;
 		width: calc(50% - 10px);
 		margin: 3px;
 		cursor: pointer;
+		box-shadow: 0 0 2px #888888;
 
 		.card-label {
 			justify-content: center;
 			position: absolute;
 			width: 100%;
 			height: 100%;
-			z-index: 1;
 			color: white;
 
 			h4 {
 				color: white;
 			}
 		}
-
-		img {
-			position: relative;
-			z-index: -1;
-			max-width: 100%;
-			max-height: 500px;
-			box-shadow: 0 0 2px #888888;
-			transition-duration: 0.2s;
-		}
 	}
 }
 
 .campaigns-list-card:hover {
-	img {
-		transform: scale(1.03);
-	}
-
 	.card-label {
 		border-style: solid;
 		border-color: #2196f3;
@@ -93,14 +79,13 @@
 .campaigns-main {
 
 	.campaigns-show-photo {
+		background-size: cover !important;
+		justify-content: flex-end;
+		max-height: 400px;
 		width: 50%;
-		padding-right: 8px;
+		margin-right: 8px;
+		box-shadow: 0 0 2px #888888;
 
-		img {
-			max-width: 100%;
-			max-height: 336px;
-			box-shadow: 0 0 2px #888888;
-		}
 	}
 
 	.campaigns-show-text {
@@ -115,7 +100,7 @@
 
 	.contribute-button {
 		margin-top: 24px;
-		width: 300px;
+		width: 320px;
 	}
 
 	.progress {
@@ -219,7 +204,6 @@
 		img {
 		    width: 100%;
 		    height: 100%;
-
 		}
 	}
 
@@ -232,6 +216,7 @@
 .campaigns-feeds-popular {
 	overflow: auto;
 	height: 50%;
+	margin-bottom: 14px;
 }
 
 .campaigns-feeds-friends {
@@ -240,5 +225,6 @@
 	border-top: solid;
 	border-width: 1px;
 	border-color: rgb(102,102,102);
+	margin-bottom: 14px;
 }
 

@@ -1,0 +1,28 @@
+/* Container */
+.offers-container {
+  width: 100%;
+  align-items: center; }
+  .offers-container h4 {
+    margin-top: 36px;
+    margin-bottom: 0; }
+  .offers-container h5 {
+    margin-bottom: 18px; }
+  .offers-container .subtitle {
+    font-size: 18px;
+    font-style: italic; }
+
+/* Survey */
+.offers-container .radio > label {
+  font-size: 18px; }
+.offers-container .survey-step-container {
+  margin-top: 48px;
+  min-height: 240px;
+  width: 440px; }
+  .offers-container .survey-step-container p {
+    font-size: 18px;
+    margin-bottom: 48px; }
+.offers-container .survey-nav {
+  margin-top: 24px; }
+.offers-container .help-block {
+  margin-top: 18px;
+  color: #e51c23; }

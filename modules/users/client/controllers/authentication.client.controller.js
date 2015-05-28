@@ -32,7 +32,7 @@ angular.module('users').controller('AuthenticationCtrl', ['$http', '$state', '$r
 
 			// Error message for radio button
 			if (!credentials || !credentials.gender) {
-				$('.gender-error').css('display','block')
+				$('.gender-error').css('display','block');
 			}
 
 			if (form.$valid) {
@@ -46,6 +46,6 @@ angular.module('users').controller('AuthenticationCtrl', ['$http', '$state', '$r
 			if (form.$valid) {
 				console.log('foobar');
 			}
-		}
+		};
 	}
 ]);
