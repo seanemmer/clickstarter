@@ -1,3 +1,4 @@
+/* Container */
 .campaigns-container {
   margin-top: 1px;
   height: 700px;
@@ -92,7 +93,7 @@
 
 /* Main offers */
 .campaigns-main .campaigns-offers-container {
-  margin-top: 24px;
+  margin-top: 20px;
   width: 60%; }
 .campaigns-main .campaigns-offers-row {
   text-align: left;
@@ -110,7 +111,9 @@
       margin-bottom: 8px; }
   .campaigns-main .campaigns-offers-row .karma-label {
     font-size: 20px;
-    margin-left: 100px;
+    display: flex;
+    flex-grow: 1;
+    justify-content: flex-end;
     align-self: center; }
 .campaigns-main .campaigns-offers-row:hover {
   cursor: pointer;

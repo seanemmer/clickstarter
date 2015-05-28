@@ -1,0 +1,98 @@
+/* Authentication General */
+
+.authentication-container {
+	margin-top: 24px;
+	justify-content: center;
+	align-items: center;
+
+	>.btn-group {
+		width: 60%;
+		max-width: 600px;
+
+		button {
+			width: 50%;
+		}
+	}
+
+	h4 {
+		margin-top: 36px;
+	}
+}
+
+/* Register */
+
+.authentication-container {
+
+	form {
+		margin-top: 24px;
+		width: 380px;
+		display: flex;
+		flex-direction: column;
+
+		button {
+			margin-top: 18px;
+			width: 50%;
+			align-self: center;
+		}
+
+		strong {
+			margin-top: 24px;
+			font-size: 12px;
+		}
+
+		p {
+			font-size: 12px;
+		}
+
+		select {
+			margin-right: 8px;
+		}
+
+		.zipcode-container {
+			::-webkit-input-placeholder { /* WebKit browsers */
+			    color: #666666 !important;
+			}
+			:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+			    color: #666666 !important;
+			}
+			::-moz-placeholder { /* Mozilla Firefox 19+ */
+			    color: #666666 !important;
+			}
+			:-ms-input-placeholder { /* Internet Explorer 10+ */
+			    color: #666666 !important;
+			}
+
+			label {
+				margin-top: 24px;
+			}
+
+			input {
+				width: 50px;
+			}
+		}
+
+		.gender-label {
+			margin-top: 10px;
+		}
+
+		.gender-radio {
+			margin-top: 6;
+			margin-left: 5px;
+			margin-bottom: 0;
+		}
+
+		.gender-error {
+			display: none;
+			color: #e51c23;
+		}
+
+		::-webkit-outer-spin-button,
+		::-webkit-inner-spin-button {
+		    -webkit-appearance: none;
+		    margin: 0;
+		}
+	}
+}
+
+/* Sign In */
+

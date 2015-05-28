@@ -1,0 +1,9 @@
+<div class="y-flex authentication-container"> 
+	<div class="btn-group" role="group">
+		<button type="button" ui-sref="authentication.register" class="btn btn-lg btn-default"
+		ng-class="{'btn-success': stateName=='authentication.register', 'btn-default': stateName!='authentication.register'}">Register</button>
+		<button type="button" ui-sref="authentication.signin" class="btn btn-lg"
+		ng-class="{'btn-success': stateName=='authentication.signin', 'btn-default': stateName!='authentication.signin'}">Sign In</button>
+	</div>
+	<ui-view></ui-view>
+</div>

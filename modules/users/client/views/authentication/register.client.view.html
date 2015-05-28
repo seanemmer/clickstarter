@@ -1,0 +1,87 @@
+<div ng-switch="registerPage">
+	<div ng-switch-when="1">
+		<h4 class="bold">Alright, we need some basic info: </h4>
+		<form name="registerForm1" novalidate ng-submit="nextRegisterPage(registerForm1, credentials)">
+			<div class="form-group" show-errors="{ showSuccess: true }">
+				<label for="firstName">First name</label>
+				<input required type="text" class="form-control" ng-model="credentials.firstName" name="firstName" placeholder="Enter first name">
+				<p class="help-block" ng-if="registerForm1.firstName.$error.required">The user's first name is required</p>
+			</div>
+			<div class="form-group" show-errors="{ showSuccess: true }">
+				<label for="lastName">Last name</label>
+				<input required type="text" class="form-control" ng-model="credentials.lastName" name="lastName" placeholder="Enter last name">
+				<p class="help-block" ng-if="registerForm1.lastName.$error.required">The user's last name is required</p>
+			</div>
+			<div class="form-group" show-errors="{ showSuccess: true }">
+				<label for="email">Email address</label>
+				<input required type="email" class="form-control" ng-model="credentials.email" name="email" placeholder="Enter email">
+				<p class="help-block" ng-if="registerForm1.email.$error.required">The user's email is required</p>
+				<p class="help-block" ng-if="registerForm1.email.$error.email">The email address is invalid</p>
+			</div>
+			<div class="form-group" show-errors="{ showSuccess: true }">
+				<label for="password">Password</label>
+				<input required ng-minlength="6" type="password" class="form-control" ng-model="credentials.password" name="password" placeholder="Password">
+				<p class="help-block" ng-if="registerForm1.password.$error.required">The user's password is required</p>
+				<p class="help-block" ng-if="registerForm1.password.$error.minlength">Password must be at least 6 characters</p>
+			</div>
+			<button type="submit" class="btn btn-lg btn-primary">Submit</button>
+		</form>
+	</div>
+
+	<div ng-switch-when="2">
+		<h4 class="bold">And a few more details: </h4>
+		<form novalidate name="registerForm2" ng-submit="submitRegister(registerForm2, credentials)">
+			<label for="zipcode">Birthday</label>
+			<div class="form-inline">
+				<div class="form-group" show-errors>
+					<select required class="form-control" ng-model="credentials.dob.month" name="month">
+						<option value="" disabled selected>Month</option>
+						<option>January</option>
+						<option>February</option>
+						<option>March</option>
+						<option>April</option>
+						<option>May</option>
+						<option>June</option>
+						<option>July</option>
+						<option>August</option>
+						<option>September</option>
+						<option>October</option>
+						<option>November</option>
+						<option>December</option>
+					</select>
+					<select required class="form-control" ng-model="credentials.dob.day" name="day">
+						<option value="" disabled selected>Day</option>
+						<option ng-repeat="option in dayOptions">{{option}}</option>
+					</select>
+					<select required class="form-control" ng-model="credentials.dob.year" name="year">
+						<option value="" disabled selected>Year</option>
+						<option ng-repeat="option in yearOptions">{{option}}</option>
+					</select>
+					<p class="help-block" ng-if="registerForm2.month.$error.required || registerForm2.day.$error.required || registerForm2.year.$error.required">The user's complete date of birth is required</p>
+				</div>
+			</div>
+			<div class="form-group zipcode-container" show-errors>
+				<label for="zipcode">Zip Code</label>
+				<input required ng-minlength="5" ng-maxlength="5" type="number" class="form-control" ng-model="credentials.zipcode" name="zipcode" placeholder="Zip">
+				<p class="help-block" ng-if="registerForm2.zipcode.$error.required">The user's Zip Code is required</p>
+				<p class="help-block" ng-if="registerForm2.zipcode.$error.minlength || registerForm2.zipcode.$error.maxlength">Please provide a valid US Zip Code </p>
+			</div>
+			<label for="zipcode" class="gender-label">Gender</label>
+			<div class="form-group gender-radio">
+				<label class="radio-inline">
+				  <input required type="radio" name="gender" ng-model="credentials.gender" value="male">Male
+				</label>
+				<label class="radio-inline">
+				  <input type="radio" name="gender" ng-model="credentials.gender" value="female">Female
+				</label>
+				<label class="radio-inline">
+				  <input type="radio" name="gender" ng-model="credentials.gender" value="other">Other
+				</label>
+			</div>
+			<p class="help-block gender-error" ng-if="!credentials.gender">The user's gender selection is required</p>
+			<strong>Why do we ask for this?</strong>
+			<p>Our goal is to help you generate as much funding as possible for the campaigns you care about.  Your basic, anonymous info lets us deliver targeted content that generates more revenue for your cause :)</p>
+			<button type="submit" class="btn btn-lg btn-primary">Complete</button>
+		</form>
+	</div>
+</div>

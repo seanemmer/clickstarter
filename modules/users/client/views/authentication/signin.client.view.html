@@ -1,0 +1,16 @@
+		<h4 class="bold">Welcome back!</h4>
+		<form name="signinForm" novalidate ng-submit="submitSignIn(signinForm, credentials)">
+			<div class="form-group" show-errors="{ showSuccess: true }">
+				<label for="email">Email address</label>
+				<input required type="email" class="form-control" name="email" ng-model="credentials.email" placeholder="Enter email">
+				<p class="help-block" ng-if="signinForm.email.$error.required">The user's email is required</p>
+				<p class="help-block" ng-if="signinForm.email.$error.email">The email address is invalid</p>
+			</div>
+			<div class="form-group" show-errors="{ showSuccess: true }">
+				<label for="password">Password</label>
+				<input required ng-minlength="6" type="password" class="form-control" name="password" ng-model="credentials.password" placeholder="Password">
+				<p class="help-block" ng-if="signinForm.password.$error.required">The user's password is required</p>
+				<p class="help-block" ng-if="signinForm.password.$error.minlength">Password must be at least 6 characters</p>
+			</div>
+			<button type="submit" class="btn btn-lg btn-primary">Submit</button>
+		</form>

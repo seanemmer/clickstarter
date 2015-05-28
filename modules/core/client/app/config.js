@@ -7,7 +7,8 @@ var ApplicationConfiguration = (function() {
 	var applicationModuleVendorDependencies = [
 		'ngResource',
 		'ui.router',
-		'angular.layout'
+		'angular.layout',
+		'ui.bootstrap.showErrors'
 	];
 
 	// Add a new vertical module

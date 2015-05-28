@@ -12,6 +12,15 @@
 dl dd {
   line-height: 22px; }
 
+/* Forms */
+.form-group .help-block {
+  color: #e51c23;
+  display: none;
+  margin-bottom: 0; }
+
+.form-group.has-error .help-block {
+  display: block; }
+
 /* FlexBox */
 .x-flex {
   display: flex;
