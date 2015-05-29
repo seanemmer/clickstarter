@@ -15,7 +15,7 @@
 .offers-container .radio > label {
   font-size: 18px; }
 .offers-container .survey-step-container {
-  margin-top: 48px;
+  margin-top: 36px;
   min-height: 240px;
   width: 440px; }
   .offers-container .survey-step-container p {
@@ -28,7 +28,7 @@
   margin-top: 18px;
   color: #e51c23; }
 .offers-container img {
-  margin-top: 18px;
+  margin-top: 12px;
   margin-bottom: 18px;
   width: 100px;
   height: 100px; }

@@ -5,10 +5,6 @@
 .logo-font {
   font-family: 'Carter One', Roboto, 'Helvetica Neue', Helvetica; }
 
-.content-container {
-  max-width: 80%;
-  margin-top: 24px; }
-
 dl dd {
   line-height: 22px; }
 
@@ -45,6 +41,7 @@ dl dd {
 
 /* Header */
 .navbar {
+  z-index: 10;
   margin-bottom: 0; }
 
 .navbar-brand {
@@ -59,3 +56,23 @@ dl dd {
 @media (max-width: 768px) {
   .jumbotron {
     padding: 40px; } }
+
+/* Home */
+.jumbotron {
+  margin-top: 60px;
+  max-width: 80%; }
+
+@media (max-width: 768px) {
+  .jumbotron {
+    padding: 40px; } }
+
+/* Learn */
+.learn-container {
+  margin-top: 48px;
+  align-items: center; }
+  .learn-container div {
+    width: 80%; }
+    .learn-container div p {
+      margin-top: 24px;
+      font-size: 24px;
+      line-height: 32px; }

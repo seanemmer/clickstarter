@@ -45,31 +45,44 @@
 		width: 100%;
 	}
 
-	.campaigns-list-card {
-		background-size: cover !important;
+	.campaign-card {
 		height: 320px;
-		position: relative;
 		width: calc(50% - 10px);
 		margin: 3px;
+		position: relative;
+		overflow: hidden;
+
 		cursor: pointer;
 		box-shadow: 0 0 2px #888888;
+	}
 
-		.card-label {
-			justify-content: center;
-			position: absolute;
-			width: 100%;
-			height: 100%;
+	.campaign-card-image {
+		position: absolute;
+		background-size: cover !important;
+		height: 100%;
+		width: 100%;
+		transition: all .3s;
+	}
+
+	.campaign-card-label {
+		justify-content: center;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		color: white;
+
+		h4 {
 			color: white;
-
-			h4 {
-				color: white;
-			}
 		}
 	}
 }
 
-.campaigns-list-card:hover {
-	.card-label {
+.campaign-card:hover {
+	.campaign-card-image {
+		transform: scale(1.03);
+	}
+
+	.campaign-card-label {
 		border-style: solid;
 		border-color: #2196f3;
 	}

@@ -27,24 +27,32 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%; }
-.campaigns-main .campaigns-list-card {
-  background-size: cover !important;
+.campaigns-main .campaign-card {
   height: 320px;
-  position: relative;
   width: calc(50% - 10px);
   margin: 3px;
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
   box-shadow: 0 0 2px #888888; }
-  .campaigns-main .campaigns-list-card .card-label {
-    justify-content: center;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+.campaigns-main .campaign-card-image {
+  position: absolute;
+  background-size: cover !important;
+  height: 100%;
+  width: 100%;
+  transition: all .3s; }
+.campaigns-main .campaign-card-label {
+  justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white; }
+  .campaigns-main .campaign-card-label h4 {
     color: white; }
-    .campaigns-main .campaigns-list-card .card-label h4 {
-      color: white; }
 
-.campaigns-list-card:hover .card-label {
+.campaign-card:hover .campaign-card-image {
+  transform: scale(1.03); }
+.campaign-card:hover .campaign-card-label {
   border-style: solid;
   border-color: #2196f3; }
 
