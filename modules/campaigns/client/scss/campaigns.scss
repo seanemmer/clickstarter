@@ -27,6 +27,7 @@
 /* Main General */
 
 .campaigns-main {
+	overflow: auto;
 	align-items: center;
 	padding-right: 14px;
 	width: 75%;
@@ -78,29 +79,39 @@
 
 .campaigns-main {
 
-	.campaigns-show-photo {
-		background-size: cover !important;
-		justify-content: flex-end;
-		max-height: 400px;
-		width: 50%;
-		margin-right: 8px;
-		box-shadow: 0 0 2px #888888;
+	.campaigns-main-content {
+		margin-top: 24px;
+		margin-bottom: 24px;
+		min-height: 300px;
+		.campaigns-show-photo {
+			background-size: cover !important;
+			max-height: 400px;
+			display: flex;
+			flex-grow: 1;
+			margin-right: 8px;
+			box-shadow: 0 0 2px #888888;
 
-	}
+		}
 
-	.campaigns-show-text {
-		width: 50%;
-		padding-left: 8px;
-	}
+		.campaigns-show-text {
+			width: 50%;
+			padding-left: 8px;
 
-	dl {
-		font-size: 18px;
-		color: #444444;
+		}
+
+		dl {
+			font-size: 18px;
+			color: #444444;
+			margin-bottom: 0;
+		}
 	}
 
 	.contribute-button {
-		margin-top: 24px;
 		width: 320px;
+	}
+
+	.progress-container {
+		align-items: center;
 	}
 
 	.progress {
@@ -113,9 +124,6 @@
 	}
 
 	.progress-legend {
-		display: flex;
-		justify-content: center;
-
 		ul {
 			list-style-type: none;
 		}
@@ -134,11 +142,13 @@
 
 .campaigns-main {
 	.campaigns-offers-container {
+		align-items: center;
 		margin-top: 20px;
-		width: 60%;
+
 	}
 
 	.campaigns-offers-row {
+		width: 60%;
 		text-align: left;
 		padding: 18px;
 		

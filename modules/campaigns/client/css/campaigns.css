@@ -15,6 +15,7 @@
 
 /* Main General */
 .campaigns-main {
+  overflow: auto;
   align-items: center;
   padding-right: 14px;
   width: 75%; }
@@ -48,44 +49,48 @@
   border-color: #2196f3; }
 
 /* Main Show */
-.campaigns-main .campaigns-show-photo {
-  background-size: cover !important;
-  justify-content: flex-end;
-  max-height: 400px;
-  width: 50%;
-  margin-right: 8px;
-  box-shadow: 0 0 2px #888888; }
-.campaigns-main .campaigns-show-text {
-  width: 50%;
-  padding-left: 8px; }
-.campaigns-main dl {
-  font-size: 18px;
-  color: #444444; }
-.campaigns-main .contribute-button {
+.campaigns-main .campaigns-main-content {
   margin-top: 24px;
+  margin-bottom: 24px;
+  min-height: 300px; }
+  .campaigns-main .campaigns-main-content .campaigns-show-photo {
+    background-size: cover !important;
+    max-height: 400px;
+    display: flex;
+    flex-grow: 1;
+    margin-right: 8px;
+    box-shadow: 0 0 2px #888888; }
+  .campaigns-main .campaigns-main-content .campaigns-show-text {
+    width: 50%;
+    padding-left: 8px; }
+  .campaigns-main .campaigns-main-content dl {
+    font-size: 18px;
+    color: #444444;
+    margin-bottom: 0; }
+.campaigns-main .contribute-button {
   width: 320px; }
+.campaigns-main .progress-container {
+  align-items: center; }
 .campaigns-main .progress {
   width: 90%;
   height: 23px; }
   .campaigns-main .progress :last-child:before {
     background-color: #f5f5f5; }
-.campaigns-main .progress-legend {
-  display: flex;
-  justify-content: center; }
-  .campaigns-main .progress-legend ul {
-    list-style-type: none; }
-  .campaigns-main .progress-legend .legend-color {
-    display: inline-block;
-    margin-right: 5px;
-    margin-top: 2px;
-    height: 10px;
-    width: 24px; }
+.campaigns-main .progress-legend ul {
+  list-style-type: none; }
+.campaigns-main .progress-legend .legend-color {
+  display: inline-block;
+  margin-right: 5px;
+  margin-top: 2px;
+  height: 10px;
+  width: 24px; }
 
 /* Main offers */
 .campaigns-main .campaigns-offers-container {
-  margin-top: 20px;
-  width: 60%; }
+  align-items: center;
+  margin-top: 20px; }
 .campaigns-main .campaigns-offers-row {
+  width: 60%;
   text-align: left;
   padding: 18px; }
   .campaigns-main .campaigns-offers-row img {

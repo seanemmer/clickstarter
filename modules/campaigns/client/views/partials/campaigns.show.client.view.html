@@ -1,7 +1,7 @@
 <h4 class="bold">{{selectedCampaign.title}}</h4>
 <span class="subtitle">{{selectedCampaign.subtitle}}</span>
 <div class="x-flex campaigns-main-content text-left">
-	<div class="x-flex campaigns-show-photo"
+	<div class="campaigns-show-photo"
 	ng-style="{'background-image': 'url(/modules/campaigns/img/temp/{{selectedCampaign.img}})'}">
 	</div>
 	<div class="campaigns-show-text">
@@ -14,7 +14,6 @@
 		  <dd>1,000 Karma: Legit stuff</dd>
 		  <dd>2,000 Karma: Awesome stuff</dd>
 		  <dd>5,000 Karma: Michael Jordan-level stuff</dd>
-		  <br>
 		</dl>
 	</div>
 </div>
@@ -23,17 +22,18 @@
 	Contribute to this campaign!
 </button>
 
-<h5 class="bold text-center">Progress</h5>
-
-<div class="progress">
-	<div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 35%">350</div>
-	<div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">200</div>
-	<div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 10%">100</div>
-</div>
-<div class="progress-legend text-left">
-	<ul>
-		<li><div class="legend-color primary"></div>Surveys</li>
-		<li><div class="legend-color warning"></div>Ad Views</li>
-		<li><div class="legend-color danger"></div>App Trials</li>
-	</ul>
+<div class="y-flex progress-container">
+	<h5 class="bold text-center">Progress</h5>
+	<div class="x-flex progress">
+		<div class="progress-bar progress-bar-primary progress-bar-striped" style="width: 35%">350</div>
+		<div class="progress-bar progress-bar-warning progress-bar-striped" style="width: 20%">200</div>
+		<div class="progress-bar progress-bar-danger progress-bar-striped" style="width: 10%">100</div>
+	</div>
+	<div class="progress-legend text-left">
+		<ul>
+			<li><div class="legend-color primary"></div>Surveys</li>
+			<li><div class="legend-color warning"></div>Ad Views</li>
+			<li><div class="legend-color danger"></div>App Trials</li>
+		</ul>
+	</div>
 </div>
