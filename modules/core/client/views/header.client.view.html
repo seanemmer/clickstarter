@@ -1,4 +1,4 @@
-<nav class="navbar navbar-inverse">
+<nav ng-controller="HeaderCtrl" class="navbar navbar-inverse">
 	<div class="container-fluid">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
@@ -14,15 +14,15 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="clickstarter-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="/">Featured</a></li>
+				<li><a ui-sref="campaigns.list">Featured</a></li>
 				<li><a ui-sref="campaigns.list">Campaigns</a></li>
-				<li><a ui-sref="authentication.register">Sign In / Register</a></li>
-				<li class="dropdown">
+				<li ng-if="!authentication.user"><a ui-sref="authentication.register">Sign In / Register</a></li>
+				<li ng-if="authentication.user" class="dropdown">
 					<a href="/" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">My Account <span class="caret"></span></a>
 					<ul class="dropdown-menu" role="menu">
 						<li><a href="/">My Campaigns</a></li>
 						<li><a href="/">Settings</a></li>
-						<li><a href="/">Log Out</a></li>
+						<li ng-click="signOut()"><a>Sign Out</a></li>
 					</ul>
 				</li>
 			</ul>

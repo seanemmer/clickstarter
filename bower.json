@@ -23,6 +23,7 @@
     "angular-layout": "~0.1.1",
     "fontawesome": "~4.3.0",
     "bootswatch": "~3.3.4",
-    "angular-bootstrap-show-errors": "~2.3.0"
+    "angular-bootstrap-show-errors": "~2.3.0",
+    "lodash": "~3.9.3"
   }
 }

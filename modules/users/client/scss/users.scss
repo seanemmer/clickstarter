@@ -82,7 +82,13 @@
 		}
 
 		.gender-error {
+			color: #e51c23;
 			display: none;
+		}
+
+		.server-error {
+			font-size: 18px;
+			margin-top: 16px;
 			color: #e51c23;
 		}
 

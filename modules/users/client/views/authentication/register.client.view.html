@@ -36,18 +36,7 @@
 				<div class="form-group" show-errors>
 					<select required class="form-control" ng-model="credentials.dob.month" name="month">
 						<option value="" disabled selected>Month</option>
-						<option>January</option>
-						<option>February</option>
-						<option>March</option>
-						<option>April</option>
-						<option>May</option>
-						<option>June</option>
-						<option>July</option>
-						<option>August</option>
-						<option>September</option>
-						<option>October</option>
-						<option>November</option>
-						<option>December</option>
+						<option ng-repeat="option in monthOptions">{{option}}</option>
 					</select>
 					<select required class="form-control" ng-model="credentials.dob.day" name="day">
 						<option value="" disabled selected>Day</option>
@@ -69,19 +58,20 @@
 			<label for="zipcode" class="gender-label">Gender</label>
 			<div class="form-group gender-radio">
 				<label class="radio-inline">
-				  <input required type="radio" name="gender" ng-model="credentials.gender" value="male">Male
+				  <input required type="radio" name="gender" ng-model="credentials.gender" value="Male">Male
 				</label>
 				<label class="radio-inline">
-				  <input type="radio" name="gender" ng-model="credentials.gender" value="female">Female
+				  <input type="radio" name="gender" ng-model="credentials.gender" value="Female">Female
 				</label>
 				<label class="radio-inline">
-				  <input type="radio" name="gender" ng-model="credentials.gender" value="other">Other
+				  <input type="radio" name="gender" ng-model="credentials.gender" value="Other">Other
 				</label>
 			</div>
 			<p class="help-block gender-error" ng-if="!credentials.gender">The user's gender selection is required</p>
 			<strong>Why do we ask for this?</strong>
 			<p>Our goal is to help you generate as much funding as possible for the campaigns you care about.  Your basic, anonymous info lets us deliver targeted content that generates more revenue for your cause :)</p>
 			<button type="submit" class="btn btn-lg btn-primary">Complete</button>
+			<p class="help-block server-error">{{error}}</p>
 		</form>
 	</div>
 </div>

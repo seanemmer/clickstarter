@@ -16,7 +16,8 @@ module.exports = {
 				'public/lib/angular-resource/angular-resource.js',
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/bootstrap/dist/js/bootstrap.js',
-				'public/lib/angular-bootstrap-show-errors/src/showErrors.js'
+				'public/lib/angular-bootstrap-show-errors/src/showErrors.js',
+				'public/lib/lodash/lodash.js'
 			],
 			tests: [
 			
