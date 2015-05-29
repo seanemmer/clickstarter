@@ -20,10 +20,15 @@
   width: 440px; }
   .offers-container .survey-step-container p {
     font-size: 18px;
-    margin-bottom: 48px; }
+    margin-bottom: 36px; }
 .offers-container .survey-nav {
   margin-top: 24px; }
 .offers-container .help-block {
   font-size: 18px;
   margin-top: 18px;
   color: #e51c23; }
+.offers-container img {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  width: 100px;
+  height: 100px; }
