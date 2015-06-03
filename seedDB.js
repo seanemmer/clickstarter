@@ -1,28 +1,33 @@
 'use strict';
 
-angular.module('campaigns').controller('CampaignsCtrl', ['$state', '$scope',
-	function($state, $scope) {
+// Set Environment
+process.env.NODE_ENV = 'development';
 
-		// Handle screen resizing
-		function setViewHeight() {
-			var windowHeight = $(window).height();
-			$('.campaigns-container').height(windowHeight - 95);				
-		}
+/**
+ * Module dependencies.
+ */
+var	config = require('./config/config'),
+	seeder = require('mongoose-seed');
 
-		setViewHeight();
-		$(window).resize(function() {
-			setViewHeight();
-		});
+// Initialize Mongoose
+seeder.connect(config.db, function() {
+	
+	seeder.loadModels(config.files.server.models);
+	seeder.clearModels(['Campaign', 'User'], function() {
+		seeder.populateModels(data);
+	});
+});
 
-		// Variable declarations
-		$scope.selectedCampaign = null;
-
-		$scope.campaigns = [
+var data = [
+	{ 
+		'model': 'Campaign',
+		'documents': [
 			{
 				'title': 'Tiggy the Tigerator',
 				'subtitle': 'Bringing beer to the masses',
 				'img': 'tiggy.png',
-				'body': 'Help us raise capital to enhance Tiggy for Reunions 2016!'
+				'body': 'Help us raise capital to enhance Tiggy for Reunions 2016!',
+				'offers': ['556e4eb2f36fed4c7ec6110f']
 			},
 			{
 				'title': 'Cheers for Charlie',
@@ -54,11 +59,31 @@ angular.module('campaigns').controller('CampaignsCtrl', ['$state', '$scope',
 				'img': 'hemp.png',
 				'body': 'Hempitecture is designing & building the first non-residential Hemp building in the US as a Movement Studio outside Sun Valley, Idaho.'
 			}
-		];
-
-		$scope.selectCampaign = function(index) {
-			$scope.selectedCampaign = $scope.campaigns[index];
-			$state.go('campaigns.show');
-		};
+		]
 	}
-]);
+];	
+
+
+/*
+	{
+		'model': 'Sponsor',
+		'documents': [
+			{
+				'name': 'The Hidden Genius Project'
+			}
+		]
+	}
+
+	{
+		'model': 'Offer',
+		'documents': [
+			{
+				'name': 'Survey',
+				'sponsor': '556e4ce49be656f07dcbf3ba',
+				'karma': 5
+			}
+		]
+	}
+*/
+
+

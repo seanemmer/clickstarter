@@ -1,13 +1,13 @@
-<h4 class="bold">{{selectedCampaign.title}}</h4>
-<span class="subtitle">{{selectedCampaign.subtitle}}</span>
+<h4 class="bold">{{campaign.title}}</h4>
+<span class="subtitle">{{campaign.subtitle}}</span>
 <div class="x-flex campaigns-main-content text-left">
 	<div class="campaigns-show-photo"
-	ng-style="{'background-image': 'url(/modules/campaigns/img/temp/{{selectedCampaign.img}})'}">
+	back-img="/modules/campaigns/img/temp/{{campaign.img}}">
 	</div>
 	<div class="campaigns-show-text">
 		<dl>
 		  <dt>Description</dt>
-		  <dd>{{selectedCampaign.body}}</dd>
+		  <dd>{{campaign.body}}</dd>
 		  <br>
 		  <dt>Thresholds:</dt>
 		  <dd>500 Karma: Basic stuff</dd>
