@@ -1,1 +1,1 @@
-web: node seedDB.js
+web: node server.js
