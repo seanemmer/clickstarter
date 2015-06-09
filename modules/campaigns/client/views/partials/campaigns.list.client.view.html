@@ -3,7 +3,7 @@
 	<div ng-repeat="campaign in campaigns" class="campaign-card" ng-click='selectCampaign($index)'>
 		<div class="y-flex campaign-card-image"
 		ng-style="{'background': 'linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0)),
-		url(/modules/campaigns/img/temp/{{campaign.img}})'}">	
+		url(https://s3-us-west-1.amazonaws.com/clickstarter/campaigns/{{campaign.img}})'}">	
 		</div>
 		<div class="y-flex campaign-card-label">
 			<h4 class="bold">{{campaign.title}}</h4>
